@@ -1,0 +1,1 @@
+# PPAI Red Sismica Registrar Resultado Revision Manual
