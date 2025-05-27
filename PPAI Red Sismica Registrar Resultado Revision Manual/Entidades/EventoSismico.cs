@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
 {
-    public class EventoSismico
+    /*public class EventoSismico
     {
         private DateTime fechaHoraFin;
         private List<EventoSismico> todosEventosSismicos = new List<EventoSismico>();
         private List<Estado> todosEstados = new List<Estado>();
         private EventoSismico eventoSismicoSeleccionado;
         private Pantalla pantallaRegRevisionManual;
-            /*
+            
             - todosEstados
             -pantallaRegRevisionManual
             - todosEventosSismicos
@@ -24,7 +24,7 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
             - seleccionAccion
             - sesion
             - aSLogueado
-            */
+            
         public EventoSismico(DateTime fechaHoraFinal) //constructor
         {
             fechaHoraFin = fechaHoraFinal;
@@ -32,5 +32,5 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         }
 
         public DateTime FechaHoraFin { get => fechaHoraFin; set => fechaHoraFin = value; }
-    }
+    }*/
 }

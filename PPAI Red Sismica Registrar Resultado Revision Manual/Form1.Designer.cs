@@ -61,6 +61,7 @@
             Name = "VentanaRedSismica";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Red Sismica";
+            Load += VentanaRedSismica_Load;
             ResumeLayout(false);
             PerformLayout();
         }

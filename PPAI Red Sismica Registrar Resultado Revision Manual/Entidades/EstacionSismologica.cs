@@ -9,7 +9,13 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
             this.nombre = nombre;
         }
 
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(string nombre) {
+            this.nombre = nombre;
+        }   
     }
 
     

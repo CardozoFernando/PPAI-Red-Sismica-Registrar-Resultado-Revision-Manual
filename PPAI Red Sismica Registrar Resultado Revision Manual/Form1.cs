@@ -13,6 +13,11 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual
             MessageBox.Show("Hola Mundo");
             Console.WriteLine("se printeo un hola mundo");
         }
+
+        private void VentanaRedSismica_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //if txtNombre.Text.Equals("")
