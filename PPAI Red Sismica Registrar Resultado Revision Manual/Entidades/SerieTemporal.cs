@@ -16,33 +16,33 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         public SerieTemporal(List<MuestraSismica> muestrasSismicas, Sismografo sismografo)
         {
             this.muestrasSismicas = muestrasSismicas;
-            this.Sismografo = sismografo;
+            this.sismografo = sismografo;
         }
 
         public List<MuestraSismica> MuestrasSismicas { get => muestrasSismicas; set => muestrasSismicas = value; }
         public Sismografo Sismografo { get => sismografo; set => sismografo = value; }
 
-        public string getDatos()
+        public List<object>  getDatos()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(obtenerMuestrasSismicas());
-            return sb.ToString();
+            List<object> datosSerieTemporal = new List<object>();
+            datosSerieTemporal.Add( obtenerMuestrasSismicas());
+            
+            return datosSerieTemporal;
         }
 
-        public string obtenerMuestrasSismicas() {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Serie Temporal de Muestras Sísmicas:");
+        public List<object> obtenerMuestrasSismicas() {
+            List<object> datosMuestraSismica = new List<object>();
             foreach (var muestra in muestrasSismicas)
             {
-                sb.AppendLine(muestra.getDatos());
+                datosMuestraSismica.Add( muestra.getDatos() );
             }
-            return sb.ToString();
+            return datosMuestraSismica;
         }
 
         public string obtenerEstacionSismologica() {
             StringBuilder sb = new StringBuilder();
             if (sismografo.sosDeSerieTemporal(this)) {
-                sb.AppendLine("Estación Sismológica: " + sismografo.EstacionSismologica.Nombre);
+                sb.AppendLine("Estación Sismológica: " + this.Sismografo.EstacionSismologica.Nombre);
             }
             return sb.ToString();
         }

@@ -25,11 +25,11 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         public DateTime FechaHoraInicio { get => fechaHoraInicio; set => fechaHoraInicio = value; }
         public Estado Estado { get => estado; set => estado = value; }
         public Empleado Empleado { get => empleado; set => empleado = value; }
-        public DateTime? FechaHoraFin1 { get => fechaHoraFin; set => fechaHoraFin = value; }
+        public DateTime? FechaHoraFin { get => fechaHoraFin; set => fechaHoraFin = value; }
 
         public bool esEstadoActual() 
         {
-            return FechaHoraFin1 == null; 
+            return FechaHoraFin == null; 
         }
     }
 

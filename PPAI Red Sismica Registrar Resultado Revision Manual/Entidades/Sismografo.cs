@@ -26,7 +26,7 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
 
         public string getDatos()
         {
-            return "Nombre: " + nombre + ", Estación Sismológica: " + estacionSismologica.getNombre();
+            return "Nombre: " + this.Nombre + ", Estación Sismológica: " + this.EstacionSismologica.Nombre;
         }
 
         public bool sosDeSerieTemporal(SerieTemporal serieTemporal)

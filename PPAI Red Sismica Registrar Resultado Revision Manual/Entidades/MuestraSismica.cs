@@ -10,22 +10,25 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
     {
         private List<DetalleMuestra> detallesMuestra;
         private DateTime fechaHoraMuestra;
+        
         public MuestraSismica(List<DetalleMuestra> detallesMuestra, DateTime fechaHoraMuestra)
         {
             this.detallesMuestra = detallesMuestra;
             this.fechaHoraMuestra = fechaHoraMuestra;
         }
+        
         public List<DetalleMuestra> DetallesMuestra { get => detallesMuestra; set => detallesMuestra = value; }
+        
         public DateTime FechaHoraMuestra { get => fechaHoraMuestra; set => fechaHoraMuestra = value; }
-        public string getDatos()
+        
+        public List<object> getDatos()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Fecha y hora de registro: " + fechaHoraMuestra);
-            foreach (var detalle in detallesMuestra)
+            List<object> datosDetalleMuestra = new List<object>();
+            foreach (DetalleMuestra detalle in detallesMuestra)
             {
-                sb.AppendLine(detalle.getDatos());
+                datosDetalleMuestra.Add( detalle.getDatos() );
             }
-            return sb.ToString();
+            return datosDetalleMuestra;
         }
     }
 }
