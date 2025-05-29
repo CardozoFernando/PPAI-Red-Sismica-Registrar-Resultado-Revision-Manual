@@ -9,9 +9,7 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual
 
         private void BtnRegResRevMan_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Antes de que se printee el hola mundo");
             MessageBox.Show("Hola Mundo");
-            Console.WriteLine("se printeo un hola mundo");
         }
 
         private void VentanaRedSismica_Load(object sender, EventArgs e)
