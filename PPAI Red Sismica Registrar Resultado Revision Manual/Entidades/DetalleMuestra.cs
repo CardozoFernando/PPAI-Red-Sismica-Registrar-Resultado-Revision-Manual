@@ -8,16 +8,16 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
 {
     public class DetalleMuestra
     {
-        private int valor;
+        private double valor;
         private TipoDeDato tipoDeDato;
 
-        public DetalleMuestra(int valor, TipoDeDato tipoDeDato)
+        public DetalleMuestra(double valor, TipoDeDato tipoDeDato)
         {
             this.valor = valor;
             this.tipoDeDato = tipoDeDato;
         }
 
-        public int Valor { get => valor; set => valor = value; }
+        public double Valor { get => valor; set => valor = value; }
         public TipoDeDato TipoDeDato { get => tipoDeDato; set => tipoDeDato = value; }
 
         public List<object> getDatos() {

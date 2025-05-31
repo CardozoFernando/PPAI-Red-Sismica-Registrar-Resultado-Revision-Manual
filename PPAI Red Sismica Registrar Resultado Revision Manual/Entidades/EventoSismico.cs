@@ -17,11 +17,11 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         private ClasificacionSismo clasificacionSismo;
         private List<SerieTemporal> serieTemporal;
         private DateTime fechaHoraOcurrencia;
-        private int latitudEpicentro;
-        private int longitudEpicentro;
-        private int latitudHipocentro;
-        private int longitudHipocentro;
-        private int valorMagnitud;
+        private double latitudEpicentro;
+        private double longitudEpicentro;
+        private double latitudHipocentro;
+        private double longitudHipocentro;
+        private double valorMagnitud;
 
         public DateTime FechaHoraFin { get => fechaHoraFin; set => fechaHoraFin = value; }
         public Estado EstadoActual { get => estadoActual; set => estadoActual = value; }
@@ -31,16 +31,16 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         public ClasificacionSismo ClasificacionSismo { get => clasificacionSismo; set => clasificacionSismo = value; }
         public List<SerieTemporal> SerieTemporal { get => serieTemporal; set => serieTemporal = value; }
         public DateTime FechaHoraOcurrencia { get => fechaHoraOcurrencia; set => fechaHoraOcurrencia = value; }
-        public int LatitudEpicentro { get => latitudEpicentro; set => latitudEpicentro = value; }
-        public int LongitudEpicentro { get => longitudEpicentro; set => longitudEpicentro = value; }
-        public int LatitudHipocentro { get => latitudHipocentro; set => latitudHipocentro = value; }
-        public int LongitudHipocentro { get => longitudHipocentro; set => longitudHipocentro = value; }
-        public int ValorMagnitud { get => valorMagnitud; set => valorMagnitud = value; }
+        public double LatitudEpicentro { get => latitudEpicentro; set => latitudEpicentro = value; }
+        public double LongitudEpicentro { get => longitudEpicentro; set => longitudEpicentro = value; }
+        public double LatitudHipocentro { get => latitudHipocentro; set => latitudHipocentro = value; }
+        public double LongitudHipocentro { get => longitudHipocentro; set => longitudHipocentro = value; }
+        public double ValorMagnitud { get => valorMagnitud; set => valorMagnitud = value; }
 
         public EventoSismico(DateTime fechaHoraFin, Estado estadoActual, List<CambioEstado> cambioEstado,
             AlcanceSismo alcanceSismico, OrigenDeGeneracion origenDeGeneracion,
             ClasificacionSismo clasificacionSismo, List<SerieTemporal> serieTemporal, DateTime fechaHoraOcurrencia,
-            int latitudEpicentro, int longitudEpicentro, int latitudHipocentro, int longitudHipocentro, int valorMagnitud)
+            double latitudEpicentro, double longitudEpicentro, double latitudHipocentro, double longitudHipocentro, double valorMagnitud)
         {
             this.FechaHoraFin = fechaHoraFin;
             this.EstadoActual = estadoActual;

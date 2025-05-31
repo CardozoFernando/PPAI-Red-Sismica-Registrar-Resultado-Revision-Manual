@@ -10,17 +10,13 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
     {
         private List<MuestraSismica> muestrasSismicas;
 
-        //dependencia?
-        private Sismografo sismografo;
-
-        public SerieTemporal(List<MuestraSismica> muestrasSismicas, Sismografo sismografo)
+        public SerieTemporal(List<MuestraSismica> muestrasSismicas)
         {
-            this.muestrasSismicas = muestrasSismicas;
-            this.sismografo = sismografo;
+            this.MuestrasSismicas = muestrasSismicas;
         }
 
         public List<MuestraSismica> MuestrasSismicas { get => muestrasSismicas; set => muestrasSismicas = value; }
-        public Sismografo Sismografo { get => sismografo; set => sismografo = value; }
+
 
         public List<object>  getDatos()
         {
@@ -32,19 +28,11 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
 
         public List<object> obtenerMuestrasSismicas() {
             List<object> datosMuestraSismica = new List<object>();
-            foreach (var muestra in muestrasSismicas)
+            foreach (var muestra in MuestrasSismicas)
             {
                 datosMuestraSismica.Add( muestra.getDatos() );
             }
             return datosMuestraSismica;
-        }
-
-        public string obtenerEstacionSismologica() {
-            StringBuilder sb = new StringBuilder();
-            if (sismografo.sosDeSerieTemporal(this)) {
-                sb.AppendLine("Estación Sismológica: " + this.Sismografo.EstacionSismologica.Nombre);
-            }
-            return sb.ToString();
         }
     }
 }
