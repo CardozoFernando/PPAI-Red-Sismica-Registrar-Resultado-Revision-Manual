@@ -21,7 +21,7 @@ namespace PPAI_Red_Sismica_Registrar_Resultado_Revision_Manual.Entidades
         public List<object>  getDatos()
         {
             List<object> datosSerieTemporal = new List<object>();
-            datosSerieTemporal.Add( obtenerMuestrasSismicas());
+            datosSerieTemporal.Add( obtenerMuestrasSismicas() );
             
             return datosSerieTemporal;
         }
